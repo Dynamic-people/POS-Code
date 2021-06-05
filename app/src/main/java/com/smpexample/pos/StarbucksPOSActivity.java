@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function2;
 
-public class OrderDetailsActivity extends AppCompatActivity {
+public class StarbucksPOSActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private RecyclerView.Adapter adapter;
@@ -35,9 +35,6 @@ public class OrderDetailsActivity extends AppCompatActivity {
     private ArrayList<Menu> arrayList;
     private FirebaseDatabase database;
     private DatabaseReference databaseReference;
-
-    static  int i;
-    String name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +56,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
                 database = FirebaseDatabase.getInstance(); // 파이어베이스 데이터베이스 연동
 
 
-                databaseReference = database.getReference("sample").child("menu").child("POS");
+                databaseReference = database.getReference("sample").child("menu").child("POS").child("STARBUSKS");
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
 
 

@@ -7,12 +7,10 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView ImgSale;
-    ImageView ImgPick;
+    ImageView Imgediya, Imgstarbucks, Imgtwosome;
     ImageView ImgExit;
 
     @Override
@@ -20,24 +18,37 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImgSale = findViewById(R.id.ImgSale);
-        ImgPick = findViewById(R.id.ImgPick);
+
+         Imgstarbucks = findViewById(R.id.img_Starbucks);
+        Imgediya = findViewById(R.id.img_Ediya);
+        Imgtwosome = findViewById(R.id.img_TwoSome);
         ImgExit = findViewById(R.id.ImgExit);
 
-        ImgSale.setOnClickListener(new View.OnClickListener() {
+
+
+        Imgstarbucks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(), OrderDetailsActivity.class);
+                Intent intent2 = new Intent(getApplicationContext(), StarbucksPOSActivity.class);
                 startActivity(intent2);
             }
         });
-        ImgPick.setOnClickListener(new View.OnClickListener() {
+
+        Imgediya.setOnClickListener(new View.OnClickListener(){
+
             @Override
             public void onClick(View v) {
-                Intent intent3 = new Intent(getApplicationContext(), OrderPickUpActivity.class);
-                startActivity(intent3);
+
             }
         });
+        Imgtwosome.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         ImgExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

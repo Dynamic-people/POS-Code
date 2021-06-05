@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.POS">
+        <activity android:name=".TwosomePOSActivity"></activity>
+        <activity android:name=".EdiyaPOSActivity" />
         <activity android:name=".OrderPickUpActivity" />
-        <activity android:name=".OrderDetailsActivity" />
+        <activity android:name=".StarbucksPOSActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -14,75 +14,122 @@
         android:orientation="horizontal"
         app:layout_constraintGuide_percent="0.33" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
-
     <ImageView
-        android:id="@+id/ImgSale"
-        android:layout_width="145dp"
-        android:layout_height="188dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        android:id="@+id/img_Starbucks"
+        android:layout_width="90dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="296dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.094"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/salee" />
+        app:srcCompat="@drawable/starbuckslogo" />
 
     <ImageView
-        android:id="@+id/ImgPick"
-        android:layout_width="140dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="36dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:id="@+id/img_Ediya"
+        android:layout_width="91dp"
+        android:layout_height="101dp"
+        android:layout_marginStart="160dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.37"
-        app:srcCompat="@drawable/pickk" />
+        app:layout_constraintTop_toTopOf="@+id/img_Starbucks"
+        app:srcCompat="@drawable/ediya" />
+
+    <ImageView
+        android:id="@+id/img_TwoSome"
+        android:layout_width="91dp"
+        android:layout_height="101dp"
+        android:layout_marginEnd="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/img_Ediya"
+        app:layout_constraintTop_toTopOf="@+id/img_Ediya"
+        app:srcCompat="@drawable/twosome" />
 
     <ImageView
         android:id="@+id/ImgExit"
-        android:layout_width="104dp"
-        android:layout_height="289dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        android:layout_width="153dp"
+        android:layout_height="159dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline2"
-        app:layout_constraintVertical_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/exittt" />
-
-    <View
-        android:id="@+id/view4"
-        android:layout_width="match_parent"
-        android:layout_height="5px"
-        android:layout_marginTop="12dp"
-        android:background="#000000"
-        app:layout_constraintTop_toBottomOf="@+id/ImgSale"
-        tools:layout_editor_absoluteX="0dp" />
 
     <View
         android:id="@+id/view5"
         android:layout_width="5px"
-        android:layout_height="585px"
-        android:layout_marginStart="29dp"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="248dp"
+        android:layout_height="1400px"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/ImgExit"
-        app:layout_constraintHorizontal_bias="0.058"
-        app:layout_constraintStart_toEndOf="@+id/ImgPick" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
 
     <View
+        android:id="@+id/view6"
+        android:layout_width="5px"
+        android:layout_height="1400px"
+        android:background="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/view7"
+        app:layout_constraintHorizontal_bias="0.656"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <View
+        android:id="@+id/view7"
         android:layout_width="match_parent"
         android:layout_height="5px"
         android:layout_marginBottom="248dp"
         android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_ediya"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="EDIYA"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_Ediya" />
+
+    <TextView
+        android:id="@+id/txt_ediya2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="260dp"
+        android:text="Twosome\nPlace"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.937"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Starbucks"
+        android:layout_width="140dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="4dp"
+        android:text="STARBUCKS"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_Starbucks"
+        app:layout_constraintVertical_bias="0.061" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
