@@ -8,62 +8,72 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.kakao.sdk.user.UserApiClient;
+import com.kakao.sdk.user.model.User;
+
 import java.util.ArrayList;
 
-public class CustomListView extends BaseAdapter
+import kotlin.Unit;
+import kotlin.jvm.functions.Function2;
+
+public class CustomListView extends RecyclerView.Adapter<CustomListView.CustomViewHolder>
 {
-    LayoutInflater layoutInflater = null;
-    private ArrayList<ListData> listViewData = null;
-    private int count = 0;
+    private ArrayList<Menu> arrayList;
+    private Context context;
+    //어댑터에서 액티비티 액션을 가져올 때 context가 필요한데 어댑터에는 context가 없다.
+    //선택한 액티비티에 대한 context를 가져올 때 필요하다.
 
-    public CustomListView(ArrayList<ListData> listData)
-    {
-        listViewData = listData;
-        count = listViewData.size();
+    public CustomListView(ArrayList<Menu> arrayList, Context context) {
+        this.arrayList = arrayList;
+        this.context = context;
     }
 
-    @Override
-    public int getCount()
-    {
-        return count;
+
+
+    //실제 리스트뷰가 어댑터에 연결된 다음에 뷰 홀더를 최초로 만들어낸다.
+    public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.orderlist_items, parent, false);
+        CustomViewHolder holder = new CustomViewHolder(view);
+        return holder;
     }
 
-    @Override
-    public Object getItem(int position)
-    {
-        return null;
-    }
 
-    @Override
-    public long getItemId(int position)
-    {
-        return 0;
-    }
+        @Override
+        public void onBindViewHolder (@NonNull CustomViewHolder holder,int position) {
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent)
-    {
-        if (convertView == null)
-        {
-            final Context context = parent.getContext();
-            if (layoutInflater == null)
-            {
-                layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            }
-            convertView = layoutInflater.inflate(R.layout.custom_listview, parent, false);
+                  holder.tv_nickname.setText("주문 고객 : " + arrayList.get(position).getNickname());
+                    holder.tv_Drink.setText("주문음료 : " + arrayList.get(position).getDrink());
+                    holder.tv_OrderTime.setText("주문일시 : " + arrayList.get(position).getFormatDate());
+                    holder.tv_Details.setText("요청사항 : " + arrayList.get(position).getDetails());
+
+
         }
 
-        ImageView mainImage = convertView.findViewById(R.id.mainImage);
+    @Override
+    public int getItemCount() {
+        return (arrayList != null ? arrayList.size() : 0);
+    }
 
-        TextView title = convertView.findViewById(R.id.title);
-        TextView body_1 = convertView.findViewById(R.id.body_1);
-        TextView body_2 = convertView.findViewById(R.id.body_2);
 
-        mainImage.setImageResource(listViewData.get(position).mainImage);
-        title.setText(listViewData.get(position).title);
-        body_1.setText(listViewData.get(position).body_1);
-        body_2.setText(listViewData.get(position).body_2);
+    public class CustomViewHolder extends RecyclerView.ViewHolder {
 
-        return convertView;
+        TextView tv_nickname;
+        TextView tv_Drink;
+        TextView tv_OrderTime;
+        TextView tv_Details;
+
+
+        public CustomViewHolder(@NonNull View itemView) {
+            super(itemView);
+
+          this.tv_nickname = itemView.findViewById(R.id.tv_nickname);
+            this.tv_Drink = itemView.findViewById(R.id.tv_Drink);
+            this.tv_OrderTime = itemView.findViewById(R.id.tv_OrderTime);
+            this.tv_Details = itemView.findViewById(R.id.tv_Details);
+
+        }
     }
 }
