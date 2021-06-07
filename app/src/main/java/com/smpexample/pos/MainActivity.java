@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-         Imgstarbucks = findViewById(R.id.img_Starbucks);
+        Imgstarbucks = findViewById(R.id.img_Starbucks);
         Imgediya = findViewById(R.id.img_Ediya);
         Imgtwosome = findViewById(R.id.img_TwoSome);
         ImgExit = findViewById(R.id.ImgExit);
@@ -29,8 +29,9 @@ public class MainActivity extends AppCompatActivity {
         Imgstarbucks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(), StarbucksPOSActivity.class);
-                startActivity(intent2);
+                Intent intent = new Intent(getApplicationContext(), StarbucksPOSActivity.class);
+                intent.putExtra("starbucks", "starbucks");
+                startActivity(intent);
             }
         });
 
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), EdiyaPOSActivity.class);
+                intent.putExtra("ediya", "ediya");
+                startActivity(intent);
 
             }
         });
@@ -45,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TwosomePOSActivity.class);
+                intent.putExtra("twosome", "twosome");
+                startActivity(intent);
 
             }
         });
