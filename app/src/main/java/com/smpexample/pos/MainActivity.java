@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         Imgstarbucks.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), StarbucksPOSActivity.class);
+                Intent intent = new Intent(getApplicationContext(), StarbucksCateActivity.class);
                 startActivity(intent);
             }
         });
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), EdiyaPOSActivity.class);
+                Intent intent = new Intent(getApplicationContext(), EdiyaCateActivity.class);
                 startActivity(intent);
 
             }
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), TwosomePOSActivity.class);
+                Intent intent = new Intent(getApplicationContext(), TwosomeCateActivity.class);
                 startActivity(intent);
 
             }

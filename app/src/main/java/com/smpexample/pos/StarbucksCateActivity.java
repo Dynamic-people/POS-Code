@@ -17,8 +17,8 @@ public class StarbucksCateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_category);
 
-        btnStarList = findViewById(R.id.btnEdiyaList);
-        btnStarChatting = findViewById(R.id.btnEdiyaChatting);
+        btnStarList = findViewById(R.id.btnStarList);
+        btnStarChatting = findViewById(R.id.btnStarChatting);
 
 
 
@@ -36,7 +36,7 @@ public class StarbucksCateActivity extends AppCompatActivity {
         btnStarChatting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(),);
+                Intent intent2 = new Intent(getApplicationContext(),StarbucksListActivity.class);
                 startActivity(intent2);
 
             }

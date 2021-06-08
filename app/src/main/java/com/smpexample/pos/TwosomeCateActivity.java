@@ -16,10 +16,10 @@ public class TwosomeCateActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ediya_cate);
+        setContentView(R.layout.activity_twosome_cate);
 
-        btnTwosomeList = findViewById(R.id.btnEdiyaList);
-        btnTwosomeChatting = findViewById(R.id.btnEdiyaChatting);
+        btnTwosomeList = findViewById(R.id.btnTwosomeList);
+        btnTwosomeChatting = findViewById(R.id.btnTwosomeChatting);
 
 
 
@@ -36,7 +36,7 @@ public class TwosomeCateActivity extends AppCompatActivity {
         btnTwosomeChatting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(),);
+                Intent intent2 = new Intent(getApplicationContext(),TwosomeListActivity.class);
                 startActivity(intent2);
 
             }

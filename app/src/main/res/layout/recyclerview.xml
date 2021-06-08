@@ -19,7 +19,7 @@
             android:orientation="vertical" >
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
+                android:id="@+id/recyclerView2"
                 android:layout_width="381dp"
                 android:layout_height="696dp"
                 android:scrollbars="horizontal|vertical"

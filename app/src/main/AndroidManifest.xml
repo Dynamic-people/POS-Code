@@ -9,12 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.POS">
-        <activity android:name=".TwosomeCateActivity"></activity>
+        <activity android:name=".TwosomeListActivity" />
+        <activity android:name=".EdiyaListActivity" />
+        <activity android:name=".StarbucksListActivity" />
+        <activity android:name=".TwosomeCateActivity" />
         <activity android:name=".EdiyaCateActivity" />
         <activity android:name=".StarbucksCateActivity" />
         <activity android:name=".TwosomePOSActivity" />
         <activity android:name=".EdiyaPOSActivity" />
-        <activity android:name=".OrderPickUpActivity" />
         <activity android:name=".StarbucksPOSActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

@@ -36,7 +36,7 @@ public class EdiyaCateActivity extends AppCompatActivity {
         btnEdiyaChatting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent2 = new Intent(getApplicationContext(),);
+                Intent intent2 = new Intent(getApplicationContext(),EdiyaListActivity.class);
                 startActivity(intent2);
 
             }

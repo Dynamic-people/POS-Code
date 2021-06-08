@@ -52,7 +52,7 @@ public class StarbucksPOSActivity extends AppCompatActivity {
                 database = FirebaseDatabase.getInstance();
 
 
-                databaseReference = database.getReference("sample").child("menu").child("POS").child("STARBUSKS");
+                databaseReference = database.getReference("sample").child("menu").child("POS").child("STARBUCKS");
                 databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
 
 
