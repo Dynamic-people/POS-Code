@@ -19,6 +19,7 @@
             android:layout_margin="3dp"
             android:text="주문 고객"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
             android:textStyle="bold" />
 
         <TextView
@@ -28,6 +29,7 @@
             android:layout_margin="3dp"
             android:text="주문음료"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
             android:textStyle="bold" />
 
         <TextView
@@ -37,6 +39,7 @@
             android:layout_margin="3dp"
             android:text="주문일시"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
             android:textStyle="bold" />
 
         <TextView
@@ -46,6 +49,7 @@
             android:layout_margin="3dp"
             android:text="요청사항"
             android:textAlignment="viewStart"
+            android:textColor="#000000"
             android:textStyle="bold" />
 
     </LinearLayout>
